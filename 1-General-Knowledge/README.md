@@ -104,7 +104,7 @@ Pre_Processor_stage:
 - mã nguồn biến đổi các file *.i thành assembly file *.s
 ```Makefile
 Compiler_stage:
-    gcc -S *.i  -o  *.S
+    gcc -S *.i -o  *.S
 ```
 ### 3. Assembler
 - Thông qua Assembler assembly file *.s thu được một file mã máy *.o. file mã máy này được mã hóa nhị phân
@@ -116,10 +116,37 @@ Assembler_stage:
 - Sau quá trình Assembler, Một project tạo ra nhiều file *.o. Các file *.o được linking kết quả tạo thành file thực thi *.exe
 ```Makefile
 Linker_stage:
-    gcc -o *.0 ... *.o
+    gcc -o *.o ... *.o
 ```
 ## III. Static and Shared library
+### 1. đặc điểm chung của Static lib và Shared lib
+- Thư viện là một tập hợp các đoạn mã được biên dịch sẵn để có thể được sử dụng lại trong một chương trình.
+- Được chia ra làm 2 loại: Static lib và Shared lib
+![image](static_N_share_lib.png)
+### 2. tạo ra Static lib và Shared lib
+1. static library
+``` Makefile
+# compiling all file *.c to machine file *.o (assembiler)
+obj:
+    gcc -o *.o -c *.c
+     
+# Creating Libraries :: Static Library Setup
+static:
+    ar rcs libmylib.a objfile_1.o ... objfile_n.o
 
+link:
+    gcc -o output obj.o -L lib_Path -l lib_name
+```
+2. shared library
+``` Makefile
+obj:
+    gcc -fPIC -o *.o -c *.c
+# Creating Libraries :: shared Library Setup
+shared:
+    gcc -share -o Path/*.so *1.o *2.o ... *n.o 
 
+link:
+    gcc main.o -L LIB_Path -l lib_name -o output
+```
 - docs:
 \- creating library in c: https://randu.org/tutorials/c/libraries.php#:~:text=Creating%20Libraries%20%3A%3A%20Static%20Library%20Setup%201%20First,4%20That%20is%20all%20that%20is%20required.%20
