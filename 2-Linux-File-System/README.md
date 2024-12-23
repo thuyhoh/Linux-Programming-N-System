@@ -33,7 +33,7 @@
 \- 'b' : Block Device file \
 \- 'l' : Link files \
 \- 's' : Socket file \
-\- 'p' : Pipe file \
+\- 'p' : Pipe file 
 - các quyền của file chia ra làm 3 phần:\
 u(user) | g(group) | o(other)
 - quyền truy nhập cơ bản cơ bản của file bao gồm:\
