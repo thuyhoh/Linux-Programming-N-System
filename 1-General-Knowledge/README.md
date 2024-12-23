@@ -36,6 +36,7 @@ DST := execute
 all : hello.c main.c
     $(CC) -o $(DST) $S^ $(FLAG) 
 ```
+
 ``giải thích:`` \
 \- \$\(CC) $\to$ giá trị trong biến CC \
 \- \$\@    $\to$ target \
