@@ -36,7 +36,7 @@ DST := execute
 all : hello.c main.c
     $(CC) -o $(DST) $S^ $(FLAG) 
 ```
-\- ``giải thích:`` \
+``giải thích:`` \
 \$(CC) $\to$ giá trị trong biến CC \
 \$@    $\to$ target \
 \$<    $\to$ giá trị bên trái cùng của dependences \
