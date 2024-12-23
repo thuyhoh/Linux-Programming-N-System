@@ -37,10 +37,10 @@ all : hello.c main.c
     $(CC) -o $(DST) $S^ $(FLAG) 
 ```
 \- ``giải thích:`` \
-\$(CC) $\to$ giá trị trong biến CC \
-\$@    $\to$ target \
-\$<    $\to$ giá trị bên trái cùng của dependences \
-\$S^    $\to$ giá trị bên trong dependences 
+\$\(CC) $\to$ giá trị trong biến CC \
+\$\@    $\to$ target \
+\$\<    $\to$ giá trị bên trái cùng của dependences \
+\$\^   $\to$ giá trị bên trong dependences 
 ### 6. Biến trong Makefile
 - Phép gán trong Makefile
 
@@ -66,10 +66,10 @@ rule:
 |var2|  "var"|
 |var3|  "var3"|
 
-\- ``giải thích:``
-var1 = \$(var) $\to$ var1 được gán đệ quy nghĩa là var1 bằng giá trị của biến var tại thời điểm lần cuối cùng biến var thay đổi \
-var2 := \$(var) $\to$ var2 được gán trực tiếp nghĩa là giá trị của var2 = \$(var) tại thời điểm gán và không thay đổi đến khi biến var2 được gán lại \
-var3 ?= \$(var) $\to$ nếu var3 chưa được khởi tạo thì var3 giống với trường hợp var1. Nếu var3 được khởi tạo giá trị var3 sẽ không đổi đến khi được gán lại 
+\- ``giải thích:`` \
+var1 \= \$\(var) $\to$ var1 được gán đệ quy nghĩa là var1 bằng giá trị của biến var tại thời điểm lần cuối cùng biến var thay đổi \
+var2 \:\= \$\(var) $\to$ var2 được gán trực tiếp nghĩa là giá trị của var2 = \$(var) tại thời điểm gán và không thay đổi đến khi biến var2 được gán lại \
+var3 \?\= \$\(var) $\to$ nếu var3 chưa được khởi tạo thì var3 giống với trường hợp var1. Nếu var3 được khởi tạo giá trị var3 sẽ không đổi đến khi được gán lại 
 ### 7. .PHONY
 \- trường hợp trong folder tồn tại các file trùng tên với các rule đã đặt trong Makefile khi này ta không thể gọi được các rule bình thường. .PHONY được sử dụng để giải quyết các trường hợp này
 ``` Makefile
