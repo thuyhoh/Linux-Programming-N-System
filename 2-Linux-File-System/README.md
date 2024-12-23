@@ -24,16 +24,16 @@
 3. tên group
 4. tên user
 5. số hardlink của file
-6. loại file, quyền của file
+6. loại file, quyền của file \
 ![image](img.png)
-- loại file bao gồm :
-\- '-' : Regular file
-\- 'd' : Directories file
-\- 'c' : Character Device file
-\- 'b' : Block Device file
-\- 'l' : Link files
-\- 's' : Socket file
-\- 'p' : Pipe file
+- loại file bao gồm : \
+\- '-' : Regular file \
+\- 'd' : Directories file \
+\- 'c' : Character Device file \
+\- 'b' : Block Device file \
+\- 'l' : Link files \
+\- 's' : Socket file \
+\- 'p' : Pipe file \
 - các quyền của file chia ra làm 3 phần:\
 u(user) | g(group) | o(other)
 - quyền truy nhập cơ bản cơ bản của file bao gồm:\
@@ -80,7 +80,7 @@ sudo chown group(:user) file
     int  close(int fd);
 ```
 ## III. quản lý file trong linux
-![image](file_table.png) 
+![image](file_table.png) \
 \- Kernel điều khiển việc tương tác giữa tiến trình và file thông qua ba bảng: File descriptor table ,Open file table, I-node table
 1. i-node table
 \- mỗi phần tử trong inode table đại diện cho 1 file chưa thông tin file đó
@@ -88,7 +88,7 @@ sudo chown group(:user) file
 4. file decription table
 
 \- Khi tiến trình dùng lệnh read()/write()
-* để tránh làm hỏng bộ nhớ do nhiều lần đọc ghi file trực tiếp với ổ nhớ cứng => đọc ghi file qua một page cache
+* để tránh làm hỏng bộ nhớ do nhiều lần đọc ghi file trực tiếp với ổ nhớ cứng => đọc ghi file qua một page cache \
 ![image](w_r.png)
 * có thể đọc trực tiếp thông qua hàm
 ## IV. File locking
