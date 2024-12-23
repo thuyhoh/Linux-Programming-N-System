@@ -36,11 +36,12 @@ DST := execute
 all : hello.c main.c
     $(CC) -o $(DST) $S^ $(FLAG) 
 ```
-\- ``giải thích:`` \
-\$\(CC) $\to$ giá trị trong biến CC \
-\$\@    $\to$ target \
-\$\<    $\to$ giá trị bên trái cùng của dependences \
-\$\^   $\to$ giá trị bên trong dependences 
+``giải thích:`` \
+\- \$\(CC) $\to$ giá trị trong biến CC \
+\- \$\@    $\to$ target \
+\- \$\<    $\to$ giá trị bên trái cùng của dependences \
+\- \$\^    $\to$ giá trị bên trong dependences 
+
 ### 6. Biến trong Makefile
 - Phép gán trong Makefile
 
@@ -87,7 +88,7 @@ rule2 :
 
 ```
 ## II. C compiling procress
-- quá trình biên dịch C thông qua 4 bước :
+- quá trình biên dịch C thông qua 4 bước : \
 ![image](c-compilation-process%20.png)
 ### 1. Pre-Processor
 - mã nguồn biến đổi file *.c thành *.i
@@ -95,7 +96,6 @@ rule2 :
 - mở rộng các macros
 - mở rộng các inclue file
 - biên dịch các câu lệnh điều kiện
-- câu lệnh Make:
 ```Makefile
 Pre_Processor_stage:
     gcc -E *.c -o *.i  

@@ -31,8 +31,10 @@
 4. Current Working Directory
 5. vim
 6. cat
-7. tree
-``docs``
-\- Linux Programming N System docs: \
+7. tree 
+8. top 
+9. ps aux| grep ten_process
 
-Youtube : https://www.youtube.com/playlist?list=PL831drV1RoWunpiXBC442qlY9FIkMepNI 
+### IV. Document
+- Playlist Youtube : https://www.youtube.com/playlist?list=PL831drV1RoWunpiXBC442qlY9FIkMepNI
+ 

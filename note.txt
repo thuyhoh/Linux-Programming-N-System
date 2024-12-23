@@ -1,0 +1,10 @@
+các loại file có trong Linux
+thông tin file
+lệnh lấy ra thông tin file
+thông tin file gồm gì
+quyền cho phép truy cập các file xác định như thế nào rwx <=> bit2|bit1|bit0 
+chmod u-r file
+chmod o- file
+chmod g- file
+
+chmod u+r file 
